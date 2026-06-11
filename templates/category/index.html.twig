@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+{% block body %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4 fw-bold">Categories</h1>
+
+    <div class="row">
+        {% for category in categories %}
+            
+            <div class="col-md-4 mb-4">
+
+                <a href="{{ path('app_category_products', {'id': category.id}) }}"
+                   style="text-decoration:none; color:inherit;">
+
+                    <div class="card shadow-sm h-100 category-card">
+
+                        <img src="{{ asset('uploads/category/' ~ category.imageName) }}"
+                             class="card-img-top"
+                             style="height:200px; object-fit:cover;">
+
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">
+                                {{ category.nameCategory }}
+                            </h5>
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

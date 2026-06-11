@@ -1,0 +1,129 @@
+<?php //easyadmin.routes.route_to_fqcn
+
+return [PHP_INT_MAX, [
+    'admin' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => null,
+        'crudAction' => null,
+    ],
+    'admin_category_index' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'index',
+    ],
+    'admin_category_new' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'new',
+    ],
+    'admin_category_batch_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'batchDelete',
+    ],
+    'admin_category_autocomplete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'autocomplete',
+    ],
+    'admin_category_render_filters' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'renderFilters',
+    ],
+    'admin_category_edit' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'edit',
+    ],
+    'admin_category_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'delete',
+    ],
+    'admin_category_detail' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\CategoryCrudController',
+        'crudAction' => 'detail',
+    ],
+    'admin_product_index' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'index',
+    ],
+    'admin_product_new' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'new',
+    ],
+    'admin_product_batch_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'batchDelete',
+    ],
+    'admin_product_autocomplete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'autocomplete',
+    ],
+    'admin_product_render_filters' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'renderFilters',
+    ],
+    'admin_product_edit' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'edit',
+    ],
+    'admin_product_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'delete',
+    ],
+    'admin_product_detail' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductCrudController',
+        'crudAction' => 'detail',
+    ],
+    'admin_product_image_index' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'index',
+    ],
+    'admin_product_image_new' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'new',
+    ],
+    'admin_product_image_batch_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'batchDelete',
+    ],
+    'admin_product_image_autocomplete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'autocomplete',
+    ],
+    'admin_product_image_render_filters' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'renderFilters',
+    ],
+    'admin_product_image_edit' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'edit',
+    ],
+    'admin_product_image_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'delete',
+    ],
+    'admin_product_image_detail' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProductImageCrudController',
+        'crudAction' => 'detail',
+    ],
+]];

@@ -1,0 +1,13 @@
+<?php //easyadmin.crud.entity_fqcn_to_controller_fqcn
+
+return [PHP_INT_MAX, [
+    'App\\Entity\\Category' => [
+        'App\\Controller\\Admin\\CategoryCrudController',
+    ],
+    'App\\Entity\\Product' => [
+        'App\\Controller\\Admin\\ProductCrudController',
+    ],
+    'App\\Entity\\ProductImage' => [
+        'App\\Controller\\Admin\\ProductImageCrudController',
+    ],
+]];

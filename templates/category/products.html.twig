@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products{% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4 fw-bold">
+        {{ category.nameCategory }}
+    </h1>
+
+    <div class="row">
+
+        {% for product in products %}
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card shadow-sm h-100">
+
+                    {# Première image du produit #}
+                    {% set firstImage = product.productImages|first %}
+
+                    {% if firstImage and firstImage.imageName %}
+
+                        <img src="{{ asset('uploads/products/' ~ firstImage.imageName) }}"
+                             class="card-img-top"
+                             style="height:200px; object-fit:cover;">
+
+                    {% else %}
+
+                        <img src="{{ asset('images/default.jpg') }}"
+                             class="card-img-top"
+                             style="height:200px; object-fit:cover;">
+
+                    {% endif %}
+
+                    <div class="card-body text-center">
+
+                        <h5 class="fw-bold">
+                            {{ product.name }}
+                        </h5>
+
+                        <p class="text-muted">
+                            {{ product.description ? product.description|slice(0,80) ~ '...' : '' }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        {% else %}
+
+            <div class="col-12">
+                <p class="text-center">Aucun produit dans cette catégorie.</p>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

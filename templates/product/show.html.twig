@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+
+    <!-- Title -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">{{ product.name }}</h1>
+        <a class="btn btn-outline-secondary " href="{{ path('app_product_index') }}">
+            ← List de Plats
+        </a>
+    </div>
+
+    <!-- Images Section -->
+    {% if product.productImages|length > 0 %}
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              
+
+                <div class="row g-3">
+                    {% for image in product.productImages %}
+                        <div class="col-6 col-md-3">
+                            <img src="{{ vich_uploader_asset(image, 'imageFile') }}"
+                                 class="img-fluid rounded shadow-sm"
+                                 style="height:200px; object-fit:cover;">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Product Info -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <h2 class="card-title fw-bold mb-3">
+                {{ product.category ? product.category.nameCategory : 'Uncategorized' }}
+            </h2>
+            <p class="card-text">
+                {{ product.description ? product.description : 'No description available.' }}
+            </p>
+
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

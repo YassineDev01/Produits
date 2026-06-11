@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plats{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+
+    <h1 class=" mb-4 fw-bold text-center border-bottom pb-3 bg-light py-2 rounded shadow-sm">
+        Nos Plats
+    </h1>
+
+    <div class="row">
+
+        {% for product in products %}
+
+            <div class="col-md-4 mb-4">
+
+                
+            <a href="{{ path('app_product_show', {'id': product.id}) }}"
+                    class="text-decoration-none text-dark">
+                <div class="card shadow-sm h-100 ">
+
+                    {# Première image #}
+                    {% set firstImage = product.productImages|first %}
+
+                    {% if firstImage and firstImage.imageName %}
+
+                        <img src="{{ asset('uploads/products/' ~ firstImage.imageName) }}"
+                             class="card-img-top"
+                             style="height:200px; object-fit:cover;">
+
+                    {% else %}
+
+                        <img src="{{ asset('images/default.jpg') }}"
+                             class="card-img-top"
+                             style="height:200px; object-fit:cover;">
+
+                    {% endif %}
+
+                    <div class="card-body text-center">
+
+                        <h5 class="fw-bold">
+                            {{ product.name }}
+                        </h5>
+
+                        <p class="text-muted">
+                            {{ product.description
+                                ? product.description|slice(0,80) ~ '...'
+                                : '' }}
+                        </p>
+
+                        {# Afficher la catégorie #}
+                        {% if product.category %}
+                            <p class="badge bg-primary">
+                                {{ product.category.nameCategory }}
+                            </p>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+            </a>
+
+            </div>
+
+
+        {% else %}
+
+
+            <div class="col-12 text-center">
+                <p>Aucun produit disponible.</p>
+            </div>
+
+        {% endfor %}
+
+    </div>
+    </div>
+
+    
+
+<div class="d-flex justify-content-center mt-4">
+    {{ knp_pagination_render(products) }}
+</div>
+
+</div>
+{% endblock %}
